@@ -15,21 +15,21 @@ import org.springframework.web.cors.CorsConfigurationSource;
 @EnableWebSecurity
 public class SecurityConfig {
 
-    // Bean for password encoding
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
-    // Security filter chain for configuring HTTP security
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                .csrf(csrf -> csrf.disable()) // Disable CSRF protection for simplicity (not recommended for production)
+                .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/api/auth/register", "/api/auth/login").permitAll() // Allow public access
-                        .anyRequest().authenticated() // Require authentication for any other requests
-                );
+                        .requestMatchers("/api/auth/register", "/api/auth/login", "/api/menu", "/api/customers",
+                                "/api/customers/{id}", "/api/property-managers/{id}",
+                                "/api/property-managers")
+                        .permitAll()
+                        .anyRequest().authenticated());
 
         return http.build();
     }
@@ -38,7 +38,7 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowCredentials(true);
-        configuration.addAllowedOrigin("*"); // Update to your allowed origins
+        configuration.addAllowedOrigin("http://localhost:3000");
         configuration.addAllowedHeader("*");
         configuration.addAllowedMethod("*");
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
