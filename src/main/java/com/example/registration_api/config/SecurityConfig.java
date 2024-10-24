@@ -29,7 +29,8 @@ public class SecurityConfig {
                                 "/api/customers", "/api/customers/{id}",
                                 "/api/property-managers/{id}", "/api/property-managers",
                                 "/api/queries", "/api/queries/{id}",
-                                "/document", "/document/pdf")
+                                "/document", "/document/pdf",
+                                "/api/customers/download", "/customers")
                         .permitAll()
                         .anyRequest().authenticated());
 
