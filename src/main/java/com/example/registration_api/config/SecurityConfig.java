@@ -25,9 +25,11 @@ public class SecurityConfig {
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/api/auth/register", "/api/auth/login", "/api/menu", "/api/customers",
-                                "/api/customers/{id}", "/api/property-managers/{id}",
-                                "/api/property-managers")
+                        .requestMatchers("/api/auth/register", "/api/auth/login", "/api/menu",
+                                "/api/customers", "/api/customers/{id}",
+                                "/api/property-managers/{id}", "/api/property-managers",
+                                "/api/queries", "/api/queries/{id}",
+                                "/document", "/document/pdf")
                         .permitAll()
                         .anyRequest().authenticated());
 
