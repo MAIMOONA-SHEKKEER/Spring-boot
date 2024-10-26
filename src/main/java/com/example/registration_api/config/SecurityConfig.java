@@ -25,12 +25,24 @@ public class SecurityConfig {
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/api/auth/register", "/api/auth/login", "/api/menu",
-                                "/api/customers", "/api/customers/{id}",
-                                "/api/property-managers/{id}", "/api/property-managers",
-                                "/api/queries", "/api/queries/{id}",
-                                "/document", "/document/pdf",
-                                "/api/customers/download", "/customers")
+                        .requestMatchers(
+                                "/api/auth/register",
+                                "/api/auth/login",
+                                "/api/menu",
+                                "/api/customers",
+                                "/api/customers/{id}",
+                                "/api/property-managers",
+                                "/api/property-managers/{id}",
+                                "/api/queries",
+                                "/api/queries/{id}",
+                                "/document",
+                                "/document/pdf",
+                                "/customers",
+                                "/api/customers/download",
+                                "/property-managers",
+                                "/api/property-managers/download",
+                                "/queries",
+                                "/api/queries/download")
                         .permitAll()
                         .anyRequest().authenticated());
 
@@ -41,9 +53,10 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowCredentials(true);
-        configuration.addAllowedOrigin("http://localhost:3000");
+        configuration.addAllowedOrigin("*");
         configuration.addAllowedHeader("*");
         configuration.addAllowedMethod("*");
+
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
         return source;

@@ -4,65 +4,54 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import com.example.registration_api.entity.PropertyManager;
-import com.example.registration_api.repository.PropertyManagerRepository;
+import com.example.registration_api.service.PropertyManagerService;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/api/property-managers")
+@CrossOrigin(origins = "http://localhost:3000")
 public class PropertyManagerController {
 
-    private final PropertyManagerRepository repository;
+    private final PropertyManagerService service;
 
-    public PropertyManagerController(PropertyManagerRepository repository) {
-        this.repository = repository;
+    public PropertyManagerController(PropertyManagerService service) {
+        this.service = service;
     }
 
     // Get all property managers
     @GetMapping
     public ResponseEntity<List<PropertyManager>> getAllPropertyManagers() {
-        List<PropertyManager> managers = repository.findAll();
+        List<PropertyManager> managers = service.getAllPropertyManagers();
         return new ResponseEntity<>(managers, HttpStatus.OK);
     }
 
     // Get a specific property manager by ID
     @GetMapping("/{id}")
     public ResponseEntity<PropertyManager> getPropertyManagerById(@PathVariable Long id) {
-        PropertyManager manager = repository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Property Manager not found"));
+        PropertyManager manager = service.getPropertyManagerById(id);
         return new ResponseEntity<>(manager, HttpStatus.OK);
     }
 
     // Create a new property manager
     @PostMapping
-    public ResponseEntity<String> createPropertyManager(@RequestBody PropertyManager manager) {
-        repository.save(manager); // Save the new property manager to the repository
-        return new ResponseEntity<>("Property Manager created successfully", HttpStatus.CREATED);
+    public ResponseEntity<PropertyManager> createPropertyManager(@RequestBody PropertyManager manager) {
+        PropertyManager createdManager = service.createPropertyManager(manager);
+        return new ResponseEntity<>(createdManager, HttpStatus.CREATED);
     }
 
     // Update an existing property manager by ID
     @PutMapping("/{id}")
-    public ResponseEntity<String> updatePropertyManager(@PathVariable Long id, @RequestBody PropertyManager manager) {
-        PropertyManager existingManager = repository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Property Manager not found"));
-
-        // Update fields
-        existingManager.setName(manager.getName());
-        existingManager.setPhone(manager.getPhone());
-        existingManager.setEmail(manager.getEmail());
-
-        repository.save(existingManager);
-        return new ResponseEntity<>("Property Manager updated successfully", HttpStatus.OK);
+    public ResponseEntity<PropertyManager> updatePropertyManager(
+            @PathVariable Long id, @RequestBody PropertyManager manager) {
+        PropertyManager updatedManager = service.updatePropertyManager(id, manager);
+        return new ResponseEntity<>(updatedManager, HttpStatus.OK);
     }
 
     // Delete a property manager by ID
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deletePropertyManager(@PathVariable Long id) {
-        PropertyManager existingManager = repository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Property Manager not found"));
-
-        repository.delete(existingManager);
+        service.deletePropertyManager(id);
         return new ResponseEntity<>("Property Manager deleted successfully", HttpStatus.OK);
     }
 }

@@ -25,11 +25,34 @@
             text-align: center;
             margin-top: 20px;
         }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
 
 <h1>Customer List</h1>
+
+<div class="button-container">
+    <!-- Download PDF Button -->
+    <a href="/api/customers/download" class="btn">Download PDF</a>
+</div>
 
 <!-- Verify if customers list is passed correctly -->
 <p th:if="${customers.size() == 0}">No customers found.</p>

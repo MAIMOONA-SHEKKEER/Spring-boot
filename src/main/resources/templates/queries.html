@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Queries List</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Queries</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Owner Name</th>
+                <th>Contact Number</th>
+                <th>Queries</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="query : ${queries}">
+                <td th:text="${query.id}"></td>
+                <td th:text="${query.ownerName}"></td>
+                <td th:text="${query.contactNumber}"></td>
+                <td th:text="${#lists.join(query.queries, ', ')}"></td>
+                <td th:text="${query.status}"></td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="/api/queries/download">Download PDF</a>
+</body>
+</html>

@@ -1,6 +1,8 @@
 package com.example.registration_api.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
@@ -9,12 +11,14 @@ import jakarta.persistence.Table;
 public class PropertyManager {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // Auto-generate ID
     private Long id;
+
     private String name;
     private String phone;
     private String email;
 
-    // Constructors, Getters, and Setters
+    // Constructors
     public PropertyManager() {
     }
 
@@ -25,6 +29,7 @@ public class PropertyManager {
         this.email = email;
     }
 
+    // Getters and Setters
     public Long getId() {
         return id;
     }
