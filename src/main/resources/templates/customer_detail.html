@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Customer Details</title>
+    <!-- Bootstrap CSS -->
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            margin-top: 50px;
+            max-width: 600px;
+            background-color: white;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .btn-download {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .btn-download:hover {
+            background-color: #45a049;
+        }
+
+        .back-link {
+            text-decoration: none;
+            color: #6c757d;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="text-center mb-4">Customer Details</h2>
+
+    <div th:if="${customer}">
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <th scope="row">ID</th>
+                    <td th:text="${customer.id}"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Name</th>
+                    <td th:text="${customer.name}"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Phone</th>
+                    <td th:text="${customer.phone}"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Email</th>
+                    <td th:text="${customer.email}"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="d-grid gap-2">
+            <a th:href="@{/api/customers/{id}/download(id=${customer.id})}" 
+               class="btn btn-download btn-block">
+                Download PDF
+            </a>
+        </div>
+    </div>
+
+    <div th:if="${error}" class="alert alert-danger mt-4" role="alert">
+        <p th:text="${error}"></p>
+    </div>
+
+    <div class="mt-4 text-center">
+        <a href="/customers" class="back-link">&larr; Back to Customer List</a>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

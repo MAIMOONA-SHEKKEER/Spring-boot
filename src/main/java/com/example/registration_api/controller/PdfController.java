@@ -14,10 +14,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
+import java.util.Optional;
 
 @Controller // Use @Controller instead of @RestController for HTML template support
 public class PdfController {
@@ -76,5 +78,57 @@ public class PdfController {
 
         document.add(table);
         document.close();
+    }
+
+    // Endpoint to display a specific customer's detail page (Thymeleaf template)
+    @GetMapping("/customers/{id}")
+    public String showCustomerDetailPage(@PathVariable Long id, Model model) {
+        Optional<Customer> customer = customerService.getCustomerById(id);
+        if (customer.isPresent()) {
+            model.addAttribute("customer", customer.get()); // Add customer data to the model
+            return "customer_detail"; // Render the Thymeleaf template "customer_detail.html"
+        } else {
+            model.addAttribute("error", "Customer not found");
+            return "error"; // Render an error page if customer not found
+        }
+    }
+
+    // Endpoint to download a PDF of a specific customer
+    @GetMapping("/api/customers/{id}/download")
+    public void downloadCustomerById(@PathVariable Long id, HttpServletResponse response)
+            throws DocumentException, IOException {
+        Optional<Customer> customer = customerService.getCustomerById(id);
+
+        if (customer.isPresent()) {
+            response.setContentType("application/pdf");
+            response.setHeader("Content-Disposition", "attachment; filename=customer_" + id + ".pdf");
+
+            // Create a new PDF document
+            Document document = new Document();
+            PdfWriter.getInstance(document, response.getOutputStream());
+
+            document.open();
+            // Create bold font for headline
+            Font boldFont = FontFactory.getFont(FontFactory.HELVETICA_BOLD, 18);
+
+            // Add headline
+            Paragraph headline = new Paragraph("Customer Details", boldFont);
+            headline.setAlignment(Element.ALIGN_CENTER);
+            document.add(headline);
+
+            // Add some space
+            document.add(new Paragraph(" "));
+
+            // Add customer details
+            Customer c = customer.get();
+            document.add(new Paragraph("Customer ID: " + c.getId()));
+            document.add(new Paragraph("Name: " + c.getName()));
+            document.add(new Paragraph("Phone: " + c.getPhone()));
+            document.add(new Paragraph("Email: " + c.getEmail()));
+
+            document.close();
+        } else {
+            response.sendError(HttpServletResponse.SC_NOT_FOUND, "Customer not found");
+        }
     }
 }

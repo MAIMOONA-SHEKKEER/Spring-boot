@@ -42,7 +42,9 @@ public class SecurityConfig {
                                 "/property-managers",
                                 "/api/property-managers/download",
                                 "/queries",
-                                "/api/queries/download")
+                                "/api/queries/download",
+                                "/customers/{id}",
+                                "/api/customers/{id}/download")
                         .permitAll()
                         .anyRequest().authenticated());
 
