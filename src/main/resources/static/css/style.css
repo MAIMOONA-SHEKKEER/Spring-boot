@@ -1,0 +1,65 @@
+body {
+    background-color: #f8f9fa;
+    margin: 0; /* Ensure no default margin */
+    padding-top: 80px; /* Leave space for the fixed header */
+  }
+  .topbar {
+    background-color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Fixed header */
+    top: 0;
+    left: 0; /* Align with the left edge */
+    right: 0; /* Stretch to the right edge */
+    z-index: 1020;
+  }
+  .logo {
+    height: 50px;
+  }
+  
+  /* Header */
+  header {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed; /* Make header fixed */
+    top: 0; /* Align at the top */
+    left: 0; /* Align with the left edge */
+    right: 0; /* Stretch to the right edge */
+    z-index: 1030; /* Higher than sidebar */
+  }
+
+  address {
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #343a40;
+    color: #adb5bd;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Page Layout */
+  .page {
+    height: 100vh;
+    padding: 20px; /* Leave space for header */
+    margin-top: 80px; /* Ensure content starts below header */
+    page-break-after: always;
+  }
+  
+  /* Chart container for the first page */
+  #chartContainer {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  

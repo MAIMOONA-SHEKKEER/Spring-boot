@@ -54,7 +54,6 @@
     <a href="/api/customers/download" class="btn">Download PDF</a>
 </div>
 
-<!-- Verify if customers list is passed correctly -->
 <p th:if="${customers.size() == 0}">No customers found.</p>
 
 <table th:if="${customers.size() > 0}">
@@ -67,7 +66,6 @@
         </tr>
     </thead>
     <tbody>
-        <!-- Iterate over the customers and display their data -->
         <tr th:each="customer : ${customers}">
             <td th:text="${customer.id}"></td>
             <td th:text="${customer.name}"></td>

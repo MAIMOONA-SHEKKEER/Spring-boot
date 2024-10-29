@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${page.title}"></title>
+</head>
+<body>
+    <div th:insert="fragments/header :: header"></div>
+
+    <h1 th:text="${page.title}"></h1>
+    <p th:text="${page.content}"></p>
+
+    <a href="/">Back to Index</a>
+
+    <div th:insert="fragments/footer :: footer"></div>
+</body>
+</html>

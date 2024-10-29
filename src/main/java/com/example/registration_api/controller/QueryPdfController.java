@@ -25,40 +25,32 @@ public class QueryPdfController {
     @Autowired
     private QueryService queryService;
 
-    // Endpoint to display the queries view (Thymeleaf template)
     @GetMapping("/queries")
     public String showQueriesPage(Model model) {
         List<Query> queries = queryService.getAllQueries();
-        model.addAttribute("queries", queries); // Add data to the model
-        return "queries"; // Render the Thymeleaf template "queries.html"
+        model.addAttribute("queries", queries); 
+        return "queries"; 
     }
 
-    // Endpoint to generate and download the PDF
     @GetMapping("/api/queries/download")
     public void downloadQueries(HttpServletResponse response) throws DocumentException, IOException {
         response.setContentType("application/pdf");
         response.setHeader("Content-Disposition", "attachment; filename=queries.pdf");
 
-        // Create a new PDF document
         Document document = new Document();
         PdfWriter.getInstance(document, response.getOutputStream());
 
         document.open();
-        // Add space
         document.add(new Paragraph(" "));
-        // Create a bold font for the headline
         Font boldFont = FontFactory.getFont(FontFactory.HELVETICA_BOLD, 16);
 
-        // Create the headline paragraph with bold font and center alignment
         Paragraph headline = new Paragraph("Query List", boldFont);
-        headline.setAlignment(Element.ALIGN_CENTER); // Align to center
+        headline.setAlignment(Element.ALIGN_CENTER);
         document.add(headline);
 
-        // Add more space
         document.add(new Paragraph(" "));
         document.add(new Paragraph(" "));
 
-        // Create a table with 4 columns
         PdfPTable table = new PdfPTable(4);
         table.addCell("ID");
         table.addCell("Owner Name");
@@ -66,13 +58,13 @@ public class QueryPdfController {
         table.addCell("Queries");
         table.addCell("Status");
 
-        // Populate the table with query data
+   
         List<Query> queries = queryService.getAllQueries();
         for (Query query : queries) {
             table.addCell(String.valueOf(query.getId()));
             table.addCell(query.getOwnerName());
             table.addCell(query.getContactNumber());
-            table.addCell(String.join(", ", query.getQueries())); // Joining list of queries
+            table.addCell(String.join(", ", query.getQueries())); 
             table.addCell(query.getStatus());
         }
 
