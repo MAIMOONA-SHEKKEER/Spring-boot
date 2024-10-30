@@ -5,19 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SunTechnosystem Document</title>
 
-    <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     />
-    <!-- Chart.js for the chart -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <style>
       body {
-        background-color: #f0f8f4; /* Light green background */
+        background-color: #f0f8f4; 
         margin: 0;
-        padding-top: 80px; /* Space for the fixed header */
+        padding-top: 80px; 
         font-family: "Arial", sans-serif;
       }
       .topbar {
@@ -31,7 +29,7 @@
         z-index: 1020;
       }
       header {
-        background-color: #28a745; /* Primary green color */
+        background-color: #28a745; 
         color: white;
         padding: 20px;
         display: flex;
@@ -51,7 +49,7 @@
         margin: 0;
       }
       footer {
-        background-color: #28a745; /* Same as header */
+        background-color: #28a745;
         color: white;
         text-align: center;
         padding: 20px 20px;
@@ -60,9 +58,9 @@
         width: 100%;
       }
       .page {
-        height: 100vh;
-        padding: 20px; /* Leave space for header */
-        margin-top: 80px; /* Ensure content starts below header */
+        height: 95vh;
+        padding: 40px;
+        margin-top: 80px; 
         page-break-after: always;
       }
 
@@ -72,29 +70,43 @@
         margin: 20px auto;
       }
       main {
-        margin: 0; /* Remove margin to center align */
+        margin: 10; 
       }
       .card {
         transition: transform 0.2s;
-        border: 1px solid #28a745; /* Green border for cards */
+        border: 1px solid #28a745;
       }
       .card:hover {
         transform: scale(1.05);
-        box-shadow: 0 4px 8px rgba(40, 167, 69, 0.2); /* Green shadow on hover */
+        box-shadow: 0 4px 8px rgba(40, 167, 69, 0.2);
       }
       .btn-primary {
-        background-color: #28a745; /* Green primary button */
+        background-color: #28a745;
         border-color: #28a745;
       }
       .btn-secondary {
-        background-color: #6c757d; /* Grey secondary button */
+        background-color: #6c757d; 
         border-color: #6c757d;
+      }
+      .paragraph {
+        background-color: #e0f7ea;
+        color: #333; 
+        padding: 20px; 
+        border-radius: 8px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        font-family: "Arial", sans-serif; 
+        line-height: 1.6;
+        margin: 20px 0; 
+      }
+      @media print {
+        .page {
+          page-break-after: always;
+        }
       }
     </style>
   </head>
 
   <body>
-    <!-- Header -->
     <header>
       <div class="d-flex align-items-center">
         <img
@@ -109,446 +121,709 @@
     </header>
 
     <div class="container-fluid">
-      <!-- Main Content Area -->
       <main class="col-md-12 px-md-4">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="page">
-              <h2 class="text-center mb-4">Welcome to SunTechnosystem!</h2>
-              <p class="lead text-center">
-                Discover cutting-edge technology solutions tailored for your
-                business needs.
-              </p>
-              <div class="text-center">
-                <button class="btn btn-primary btn-lg">Get Started</button>
+        <div class="page">
+          <h2 class="text-center mb-4">Welcome to SunTechnosystem!</h2>
+          <p class="lead text-center">
+            Discover cutting-edge technology solutions tailored for your
+            business needs.
+          </p>
+          <div class="text-center">
+            <button class="btn btn-primary btn-lg">Get Started</button>
+            <p class="paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse a enim quis velit facilisis fringilla. Curabitur
+              tincidunt ligula in mauris pretium, vitae tristique risus varius.
+              Fusce non neque ut erat aliquet cursus in eget arcu.Lorem ipsum
+              dolor sit amet, consectetur adipiscing elit. Suspendisse a enim
+              quis velit facilisis fringilla. Curabitur tincidunt ligula in
+              mauris pretium, vitae tristique risus varius. Fusce non neque ut
+              erat aliquet cursus in eget arcu. Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. Suspendisse a enim quis velit
+              facilisis fringilla. Curabitur tincidunt ligula in mauris pretium,
+              vitae tristique risus varius. Fusce non neque ut erat aliquet
+              cursus in eget arcu. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Suspendisse a enim quis velit facilisis
+              fringilla. Curabitur tincidunt ligula in mauris pretium, vitae
+              tristique risus varius. Fusce non neque ut erat aliquet cursus in
+              eget arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse a enim quis velit facilisis fringilla. Curabitur
+              tincidunt ligula in mauris pretium, vitae tristique risus varius.
+              Fusce non neque ut erat aliquet cursus in eget arcu.Lorem ipsum
+              dolor sit amet, consectetur adipiscing elit. Suspendisse a enim
+              quis velit facilisis fringilla. Curabitur tincidunt ligula in
+              mauris pretium, vitae tristique risus varius. Fusce non neque ut
+              erat aliquet cursus in eget arcu. Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. Suspendisse a enim quis velit
+              facilisis fringilla. Curabitur tincidunt ligula in mauris pretium,
+              vitae tristique risus varius. Fusce non neque ut erat aliquet
+              cursus in eget arcu. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Suspendisse a enim quis velit facilisis
+              fringilla. Curabitur tincidunt ligula in mauris pretium, vitae
+              tristique risus varius. Fusce non neque ut erat aliquet cursus in
+              eget arcu.
+              
+            </p>
+          </div>
+        </div>
+
+        <div class="page">
+          <h2 class="text-center">Performance Overview</h2>
+          <canvas id="performanceChart" height="100"></canvas>
+          <p class="paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            a enim quis velit facilisis fringilla. Curabitur tincidunt ligula in
+            mauris pretium, vitae tristique risus varius. Fusce non neque ut
+            erat aliquet cursus in eget arcu.Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Suspendisse a enim quis velit facilisis
+            fringilla. Curabitur tincidunt ligula in mauris pretium, vitae
+            tristique risus varius. Fusce non neque ut erat aliquet cursus in
+            eget arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Suspendisse a enim quis velit facilisis fringilla. Curabitur
+            tincidunt ligula in mauris pretium, vitae tristique risus varius.
+            Fusce non neque ut erat aliquet cursus in eget arcu. Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit. Suspendisse a enim quis
+            velit facilisis fringilla. Curabitur tincidunt ligula in mauris
+            pretium, vitae tristique risus varius. Fusce non neque ut erat
+            aliquet cursus in eget arcu.Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Suspendisse a enim quis velit facilisis fringilla.
+            Curabitur tincidunt ligula in mauris pretium, vitae tristique risus
+            varius.
+          </p>
+        </div>
+
+        <div class="page">
+          <h2 class="text-center">Data Overview</h2>
+          <div id="chartContainer">
+            <canvas id="myChart"></canvas>
+          </div>
+          <p class="paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            a enim quis velit facilisis fringilla. Curabitur tincidunt ligula in
+            mauris pretium, vitae tristique risus varius. Fusce non neque ut
+            erat aliquet cursus in eget arcu.Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Suspendisse a enim quis velit facilisis
+            fringilla. Curabitur tincidunt ligula in mauris pretium, vitae
+            tristique risus varius. Fusce non neque ut erat aliquet cursus in
+            eget arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Suspendisse a enim quis velit facilisis fringilla. Curabitur
+            tincidunt ligula in mauris pretium, vitae tristique risus varius.
+            Fusce non neque ut erat aliquet cursus in eget arcu. Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit. Suspendisse a enim quis
+            velit facilisis fringilla. Curabitur tincidunt ligula in mauris
+            pretium, vitae tristique risus varius. Fusce non neque ut erat
+            aliquet cursus in eget arcu.Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Suspendisse a enim quis velit facilisis fringilla.
+            Curabitur tincidunt ligula in mauris pretium, vitae tristique risus
+            varius. Fusce non neque ut erat aliquet cursus in eget arcu.Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a
+            enim quis velit facilisis fringilla. Curabitur tincidunt ligula in
+            mauris pretium, vitae tristique risus varius. Fusce non neque ut
+            erat aliquet cursus in eget arcu. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Suspendisse a enim quis velit facilisis
+            fringilla. Curabitur tincidunt ligula in mauris pretium, vitae
+            tristique risus varius.
+          </p>
+        </div>
+
+        <div class="page">
+          <h2 class="text-center mb-4">Our Services</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title">Consulting</h5>
+                  <p class="card-text">
+                    Expert advice to help you navigate technology challenges.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse a enim quis velit facilisis fringilla. Curabitur
+                    tincidunt ligula in mauris pretium, vitae tristique risus
+                    varius. Fusce non neque ut erat aliquet cursus in eget
+                    arcu.Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Suspendisse a enim quis velit facilisis fringilla.
+                    Curabitur tincidunt ligula in mauris pretium, vitae
+                    tristique risus varius. Fusce non neque ut erat aliquet
+                    cursus in eget arcu. Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Suspendisse a enim quis velit facilisis
+                    fringilla. Curabitur tincidunt ligula in mauris pretium,
+                    vitae tristique risus varius. Fusce non neque ut erat
+                    aliquet cursus in eget arcu. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Suspendisse a enim quis velit
+                    facilisis fringilla. Curabitur tincidunt ligula in mauris
+                    pretium, vitae tristique risus varius. Fusce non neque ut
+                    erat aliquet cursus in eget arcu.
+                  </p>
+                  <a href="#" class="btn btn-secondary">Learn More</a>
+                </div>
               </div>
             </div>
-            <div class="card shadow-sm mb-4">
-              <div class="card-body">
-                <h5 class="card-title">Performance Overview</h5>
-                <canvas id="performanceChart" height="100"></canvas>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title">Development</h5>
+                  <p class="card-text">
+                    Custom software solutions that drive your business forward.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse a enim quis velit facilisis fringilla. Curabitur
+                    tincidunt ligula in mauris pretium, vitae tristique risus
+                    varius. Fusce non neque ut erat aliquet cursus in eget
+                    arcu.Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Suspendisse a enim quis velit facilisis fringilla.
+                    Curabitur tincidunt ligula in mauris pretium, vitae
+                    tristique risus varius. Fusce non neque ut erat aliquet
+                    cursus in eget arcu. Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Suspendisse a enim quis velit facilisis
+                    fringilla. Curabitur tincidunt ligula in mauris pretium,
+                    vitae tristique risus varius. Fusce non neque ut erat
+                    aliquet cursus in eget arcu. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Suspendisse a enim quis velit
+                    facilisis fringilla. Curabitur tincidunt ligula in mauris
+                    pretium, vitae tristique risus varius. Fusce non neque ut
+                    erat aliquet cursus in eget arcu.
+                  </p>
+                  <a href="#" class="btn btn-secondary">Learn More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title">Support</h5>
+                  <p class="card-text">
+                    24/7 support to keep your systems running smoothly. Lorem
+                    ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse a enim quis velit facilisis fringilla. Curabitur
+                    tincidunt ligula in mauris pretium, vitae tristique risus
+                    varius. Fusce non neque ut erat aliquet cursus in eget
+                    arcu.Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Suspendisse a enim quis velit facilisis fringilla.
+                    Curabitur tincidunt ligula in mauris pretium, vitae
+                    tristique risus varius. Fusce non neque ut erat aliquet
+                    cursus in eget arcu. Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Suspendisse a enim quis velit facilisis
+                    fringilla. Curabitur tincidunt ligula in mauris pretium,
+                    vitae tristique risus varius. Fusce non neque ut erat
+                    aliquet cursus in eget arcu. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Suspendisse a enim quis velit
+                    facilisis fringilla. Curabitur tincidunt ligula in mauris
+                    pretium, vitae tristique risus varius. Fusce non neque ut
+                    erat aliquet cursus in eget arcu.
+                  </p>
+                  <a href="#" class="btn btn-secondary">Learn More</a>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+
+        <div class="page">
+          <h2 class="text-center mb-4">What Our Customers Say</h2>
+          <div
+            class="carousel slide"
+            id="testimonialCarousel"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <blockquote class="blockquote text-center">
+                  <p class="mb-0">
+                    "SunTechnosystem transformed our business with their
+                    innovative solutions.Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Suspendisse a enim quis velit facilisis
+                    fringilla. Curabitur tincidunt ligula in mauris pretium,
+                    vitae tristique risus varius. Fusce non neque ut erat
+                    aliquet cursus in eget arcu.Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Suspendisse a enim quis velit
+                    facilisis fringilla. Curabitur tincidunt ligula in mauris
+                    pretium, vitae tristique risus varius. Fusce non neque ut
+                    erat aliquet cursus in eget arcu. Lorem ipsum dolor sit
+                    amet, consectetur adipiscing elit. Suspendisse a enim quis
+                    velit facilisis fringilla. Curabitur tincidunt ligula in
+                    mauris pretium, vitae tristique risus varius. Fusce non
+                    neque ut erat aliquet cursus in eget arcu. Lorem ipsum dolor
+                    sit amet, consectetur adipiscing elit. Suspendisse a enim
+                    quis velit facilisis fringilla. Curabitur tincidunt ligula
+                    in mauris pretium, vitae tristique risus varius. Fusce non
+                    neque ut erat aliquet cursus in eget arcu."
+                  </p>
+                  <footer class="blockquote-footer">
+                    Jane Doe, <cite title="Source Title">CEO, TechCorp</cite>
+                  </footer>
+                </blockquote>
+              </div>
+              <div class="carousel-item">
+                <blockquote class="blockquote text-center">
+                  <p class="mb-0">
+                    "The support team is outstanding! They are always ready to
+                    help.Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Suspendisse a enim quis velit facilisis fringilla.
+                    Curabitur tincidunt ligula in mauris pretium, vitae
+                    tristique risus varius. Fusce non neque ut erat aliquet
+                    cursus in eget arcu.Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Suspendisse a enim quis velit facilisis
+                    fringilla. Curabitur tincidunt ligula in mauris pretium,
+                    vitae tristique risus varius. Fusce non neque ut erat
+                    aliquet cursus in eget arcu. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Suspendisse a enim quis velit
+                    facilisis fringilla. Curabitur tincidunt ligula in mauris
+                    pretium, vitae tristique risus varius. Fusce non neque ut
+                    erat aliquet cursus in eget arcu. Lorem ipsum dolor sit
+                    amet, consectetur adipiscing elit. Suspendisse a enim quis
+                    velit facilisis fringilla. Curabitur tincidunt ligula in
+                    mauris pretium, vitae tristique risus varius. Fusce non
+                    neque ut erat aliquet cursus in eget arcu."
+                  </p>
+                  <footer class="blockquote-footer">
+                    John Smith,
+                    <cite title="Source Title">CTO, InnovateInc</cite>
+                  </footer>
+                </blockquote>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#testimonialCarousel"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#testimonialCarousel"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <p class="paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            a enim quis velit facilisis fringilla. Curabitur tincidunt ligula in
+            mauris pretium, vitae tristique risus varius. Fusce non neque ut
+            erat aliquet cursus in eget arcu.Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Suspendisse a enim quis velit facilisis
+            fringilla. Curabitur tincidunt ligula in mauris pretium, vitae
+            tristique risus varius. Fusce non neque ut erat aliquet cursus in
+            eget arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Suspendisse a enim quis velit facilisis fringilla. Curabitur
+            tincidunt ligula in mauris pretium, vitae tristique risus varius.
+            Fusce non neque ut erat aliquet cursus in eget arcu. Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit. Suspendisse a enim quis
+            velit facilisis fringilla. Curabitur tincidunt ligula in mauris
+            pretium, vitae tristique risus varius. Fusce non neque ut erat
+            aliquet cursus in eget arcu.Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Suspendisse a enim quis velit facilisis fringilla.
+            Curabitur tincidunt ligula in mauris pretium, vitae tristique risus
+            varius. Fusce non neque ut erat aliquet cursus in eget arcu.Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a
+            enim quis velit facilisis fringilla. Curabitur tincidunt ligula in
+            mauris pretium, vitae tristique risus varius. Fusce non neque ut
+            erat aliquet cursus in eget arcu. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Suspendisse a enim quis velit facilisis
+            fringilla. Curabitur tincidunt ligula in mauris pretium, vitae
+            tristique risus varius. Fusce non neque ut erat aliquet cursus in
+            eget arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Suspendisse a enim quis velit facilisis fringilla. Curabitur
+            tincidunt ligula in mauris pretium, vitae tristique risus varius.
+            Fusce non neque ut erat aliquet cursus in eget arcu.
+          </p>
+        </div>
+
+        <div class="page">
+          <h2 class="text-center mb-4">Latest News & Updates</h2>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <h5>New Product Launch!</h5>
+              <p>
+                We are excited to announce the launch of our latest software
+                solution.Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Suspendisse a enim quis velit facilisis fringilla.
+                Curabitur tincidunt ligula in mauris pretium, vitae tristique
+                risus varius. Fusce non neque ut erat aliquet cursus in eget
+                arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse a enim quis velit facilisis fringilla. Curabitur
+                tincidunt ligula in mauris pretium, vitae tristique risus
+                varius. Fusce non neque ut erat aliquet cursus in eget arcu.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse a enim quis velit facilisis fringilla. Curabitur
+                tincidunt ligula in mauris pretium, vitae tristique risus
+                varius. Fusce non neque ut erat aliquet cursus in eget arcu.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse a enim quis velit facilisis fringilla. Curabitur
+                tincidunt ligula in mauris pretium, vitae tristique risus
+                varius. Fusce non neque ut erat aliquet cursus in eget arcu.
+              </p>
+              <a href="#" class="btn btn-link">Read More</a>
+            </li>
+            <li class="list-group-item">
+              <h5>Upcoming Webinar</h5>
+              <p>
+                Join us for a webinar on how to leverage technology for growth.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse a enim quis velit facilisis fringilla. Curabitur
+                tincidunt ligula in mauris pretium, vitae tristique risus
+                varius. Fusce non neque ut erat aliquet cursus in eget
+                arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse a enim quis velit facilisis fringilla. Curabitur
+                tincidunt ligula in mauris pretium, vitae tristique risus
+                varius. Fusce non neque ut erat aliquet cursus in eget arcu.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse a enim quis velit facilisis fringilla. Curabitur
+                tincidunt ligula in mauris pretium, vitae tristique risus
+                varius. Fusce non neque ut erat aliquet cursus in eget arcu.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse a enim quis velit facilisis fringilla. Curabitur
+                tincidunt ligula in mauris pretium, vitae tristique risus
+                varius. Fusce non neque ut erat aliquet cursus in eget arcu.
+              </p>
+              <a href="#" class="btn btn-link">Register Now</a>
+            </li>
+            <li class="list-group-item">
+              <h5>Customer Success Story</h5>
+              <p>
+                Learn how our solutions helped a client increase their
+                efficiency by 30%.Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Suspendisse a enim quis velit facilisis
+                fringilla. Curabitur tincidunt ligula in mauris pretium, vitae
+                tristique risus varius. Fusce non neque ut erat aliquet cursus
+                in eget arcu.Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Suspendisse a enim quis velit facilisis fringilla.
+                Curabitur tincidunt ligula in mauris pretium, vitae tristique
+                risus varius. Fusce non neque ut erat aliquet cursus in eget
+                arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse a enim quis velit facilisis fringilla. Curabitur
+                tincidunt ligula in mauris pretium, vitae tristique risus
+                varius. Fusce non neque ut erat aliquet cursus in eget arcu.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse a enim quis velit facilisis fringilla. Curabitur
+                tincidunt ligula in mauris pretium, vitae tristique risus
+                varius. Fusce non neque ut erat aliquet cursus in eget arcu.
+              </p>
+              <a href="#" class="btn btn-link">Read the Story</a>
+            </li>
+          </ul>
+    
+        </div>
+
+        <div class="page">
+          <h2 class="text-center m-5">Contact Us</h2>
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" required />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required />
+            </div>
+            <div class="mb-3">
+              <label for="name" class="form-label">Age</label>
+              <input type="text" class="form-control" id="name" required />
+            </div>
+            <div class="mb-3">
+              <label for="name" class="form-label">Address</label>
+              <input type="text" class="form-control" id="name" required />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Contact No</label>
+              <input type="email" class="form-control" id="email" required />
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea
+                class="form-control"
+                id="message"
+                rows="3"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
         </div>
       </main>
-
-      <!-- First Page with Chart -->
-      <div class="page">
-        <h2 class="text-center">Data Overview</h2>
-        <div id="chartContainer">
-          <canvas id="myChart"></canvas>
-        </div>
-      </div>
-
-      <div class="page">
-        <h2 class="text-center mb-4">Our Services</h2>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">Consulting</h5>
-                <p class="card-text">
-                  Expert advice to help you navigate technology challenges.
-                </p>
-                <a href="#" class="btn btn-secondary">Learn More</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">Development</h5>
-                <p class="card-text">
-                  Custom software solutions that drive your business forward.
-                </p>
-                <a href="#" class="btn btn-secondary">Learn More</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">Support</h5>
-                <p class="card-text">
-                  24/7 support to keep your systems running smoothly.
-                </p>
-                <a href="#" class="btn btn-secondary">Learn More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="page">
-        <h2 class="text-center mb-4">What Our Customers Say</h2>
-        <div
-          class="carousel slide"
-          id="testimonialCarousel"
-          data-bs-ride="carousel"
-        >
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <blockquote class="blockquote text-center">
-                <p class="mb-0">
-                  "SunTechnosystem transformed our business with their
-                  innovative solutions."
-                </p>
-                <footer class="blockquote-footer">
-                  Jane Doe, <cite title="Source Title">CEO, TechCorp</cite>
-                </footer>
-              </blockquote>
-            </div>
-            <div class="carousel-item">
-              <blockquote class="blockquote text-center">
-                <p class="mb-0">
-                  "The support team is outstanding! They are always ready to
-                  help."
-                </p>
-                <footer class="blockquote-footer">
-                  John Smith, <cite title="Source Title">CTO, InnovateInc</cite>
-                </footer>
-              </blockquote>
-            </div>
-          </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#testimonialCarousel"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#testimonialCarousel"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
-
-      <div class="page">
-        <h2 class="text-center mb-4">Latest News & Updates</h2>
-        <ul class="list-group">
-          <li class="list-group-item">
-            <h5>New Product Launch!</h5>
-            <p>
-              We are excited to announce the launch of our latest software
-              solution.
-            </p>
-            <a href="#" class="btn btn-link">Read More</a>
-          </li>
-          <li class="list-group-item">
-            <h5>Upcoming Webinar</h5>
-            <p>
-              Join us for a webinar on how to leverage technology for growth.
-            </p>
-            <a href="#" class="btn btn-link">Register Now</a>
-          </li>
-          <li class="list-group-item">
-            <h5>Customer Success Story</h5>
-            <p>
-              Learn how our solutions helped a client increase their efficiency
-              by 30%.
-            </p>
-            <a href="#" class="btn btn-link">Read the Story</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="page">
-        <h2 class="text-center mb-4">Meet Our Team</h2>
-        <div class="row">
-          <div class="col-md-3">
-            <div class="card mb-4 shadow-sm">
-              <img
-                src="https://images.unsplash.com/photo-1612882797474-9e0efde18307"
-                class="card-img-top"
-                alt="Team Member 1"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Alice Johnson</h5>
-                <p class="card-text">Lead Developer</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card mb-4 shadow-sm">
-              <img
-                src="team_member_2.jpg"
-                class="card-img-top"
-                alt="Team Member 2"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Bob Smith</h5>
-                <p class="card-text">Project Manager</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card mb-4 shadow-sm">
-              <img
-                src="team_member_3.jpg"
-                class="card-img-top"
-                alt="Team Member 3"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Clara Brown</h5>
-                <p class="card-text">UI/UX Designer</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card mb-4 shadow-sm">
-              <img
-                src="team_member_4.jpg"
-                class="card-img-top"
-                alt="Team Member 4"
-              />
-              <div class="card-body">
-                <h5 class="card-title">David Wilson</h5>
-                <p class="card-text">Marketing Specialist</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="page">
-        <h2 class="text-center mb-4">Frequently Asked Questions</h2>
-        <div class="accordion" id="faqAccordion">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="faqHeadingOne">
-              <button
-                class="accordion-button"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#faqCollapseOne"
-                aria-expanded="true"
-                aria-controls="faqCollapseOne"
-              >
-                What services do you offer?
-              </button>
-            </h2>
-            <div
-              id="faqCollapseOne"
-              class="accordion-collapse collapse show"
-              aria-labelledby="faqHeadingOne"
-              data-bs-parent="#faqAccordion"
-            >
-              <div class="accordion-body">
-                We offer a range of services including consulting, software
-                development, and 24/7 support.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="faqHeadingTwo">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#faqCollapseTwo"
-                aria-expanded="false"
-                aria-controls="faqCollapseTwo"
-              >
-                How can I contact support?
-              </button>
-            </h2>
-            <div
-              id="faqCollapseTwo"
-              class="accordion-collapse collapse"
-              aria-labelledby="faqHeadingTwo"
-              data-bs-parent="#faqAccordion"
-            >
-              <div class="accordion-body">
-                You can reach our support team via email or by calling our
-                support hotline.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="page">
-        <h2 class="text-center mb-4">Contact Us</h2>
-        <form>
-          <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" required />
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" required />
-          </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Message</label>
-            <textarea
-              class="form-control"
-              id="message"
-              rows="3"
-              required
-            ></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Send Message</button>
-        </form>
-      </div>
-
-      <div class="page">
-        <h2 class="text-center mb-4">Pricing Plans</h2>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">Basic Plan</h5>
-                <p class="card-text">$10/month</p>
-                <a href="#" class="btn btn-primary">Choose Plan</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">Pro Plan</h5>
-                <p class="card-text">$30/month</p>
-                <a href="#" class="btn btn-primary">Choose Plan</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">Enterprise Plan</h5>
-                <p class="card-text">Contact us for pricing</p>
-                <a href="#" class="btn btn-primary">Contact Sales</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="page">
-        <h2 class="text-center mb-4">Our Portfolio</h2>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <img src="portfolio_1.jpg" class="card-img-top" alt="Project 1" />
-              <div class="card-body">
-                <h5 class="card-title">Project Title 1</h5>
-                <p class="card-text">Brief description of the project.</p>
-                <a href="#" class="btn btn-secondary">View Project</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <img src="portfolio_2.jpg" class="card-img-top" alt="Project 2" />
-              <div class="card-body">
-                <h5 class="card-title">Project Title 2</h5>
-                <p class="card-text">Brief description of the project.</p>
-                <a href="#" class="btn btn-secondary">View Project</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <img src="portfolio_3.jpg" class="card-img-top" alt="Project 3" />
-              <div class="card-body">
-                <h5 class="card-title">Project Title 3</h5>
-                <p class="card-text">Brief description of the project.</p>
-                <a href="#" class="btn btn-secondary">View Project</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="page">
-        <h2 class="text-center mb-4">Latest Blog Posts</h2>
-        <div class="list-group">
-          <a href="#" class="list-group-item list-group-item-action">
-            <h5 class="mb-1">Understanding Cloud Computing</h5>
-            <p class="mb-1">
-              An overview of cloud computing and its benefits for businesses.
-            </p>
-          </a>
-          <a href="#" class="list-group-item list-group-item-action">
-            <h5 class="mb-1">Top 5 Tech Trends in 2024</h5>
-            <p class="mb-1">A look at the technologies shaping the future.</p>
-          </a>
-        </div>
-      </div>
-
-      <!-- Footer -->
-      <footer>
-        <p>&copy; 2024 SunTechnosystem. All rights reserved.</p>
-        <p>This document belongs to Property of SunTechnosystem.</p>
-      </footer>
     </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="page">
+      <h2 class="text-center mb-4">Pricing Plans</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Basic Plan</h5>
+              <p class="card-text">$10/month</p>
+              <a href="#" class="btn btn-primary">Choose Plan</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Pro Plan</h5>
+              <p class="card-text">$30/month</p>
+              <a href="#" class="btn btn-primary">Choose Plan</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Enterprise Plan</h5>
+              <p class="card-text">Contact us for pricing</p>
+              <a href="#" class="btn btn-primary">Contact Sales</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="paragraph">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a
+        enim quis velit facilisis fringilla. Curabitur tincidunt ligula in
+        mauris pretium, vitae tristique risus varius. Fusce non neque ut erat
+        aliquet cursus in eget arcu.Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Suspendisse a enim quis velit facilisis fringilla.
+        Curabitur tincidunt ligula in mauris pretium, vitae tristique risus
+        varius. Fusce non neque ut erat aliquet cursus in eget arcu. Lorem ipsum
+        dolor sit amet, consectetur adipiscing elit. Suspendisse a enim quis
+        velit facilisis fringilla. Curabitur tincidunt ligula in mauris pretium,
+        vitae tristique risus varius. Fusce non neque ut erat aliquet cursus in
+        eget arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Suspendisse a enim quis velit facilisis fringilla. Curabitur tincidunt
+        ligula in mauris pretium, vitae tristique risus varius. Fusce non neque
+        ut erat aliquet cursus in eget arcu.Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Suspendisse a enim quis velit facilisis
+        fringilla. Curabitur tincidunt ligula in mauris pretium, vitae tristique
+        risus varius. Fusce non neque ut erat aliquet cursus in eget arcu.Lorem
+        ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a enim
+        quis velit facilisis fringilla. Curabitur tincidunt ligula in mauris
+        pretium, vitae tristique risus varius. Fusce non neque ut erat aliquet
+        cursus in eget arcu. Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. Suspendisse a enim quis velit facilisis fringilla. Curabitur
+        tincidunt ligula in mauris pretium, vitae tristique risus varius. Fusce
+        non neque ut erat aliquet cursus in eget arcu. Lorem ipsum dolor sit
+        amet, consectetur adipiscing elit. Suspendisse a enim quis velit
+        facilisis fringilla. Curabitur tincidunt ligula in mauris pretium, vitae
+        tristique risus varius. Fusce non neque ut erat aliquet cursus in eget
+        arcu.
+      </p>
+    </div>
 
-    <!-- Chart Initialization Script -->
+    <div class="page">
+      <h2 class="text-center mb-4">Our Portfolio</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Project Title 1</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse a enim quis velit facilisis fringilla. Curabitur
+                tincidunt ligula in mauris pretium, vitae tristique risus
+                varius. Fusce non neque ut erat aliquet cursus in eget
+                arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse a enim quis velit facilisis fringilla. Curabitur
+                tincidunt ligula in mauris pretium, vitae tristique risus
+                varius. Fusce non neque ut erat aliquet cursus in eget arcu.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse a enim quis velit facilisis fringilla. Curabitur
+                tincidunt ligula in mauris pretium, vitae tristique risus
+                varius. Fusce non neque ut erat aliquet cursus in eget arcu.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse a enim quis velit facilisis fringilla. Curabitur
+                tincidunt ligula in mauris pretium, vitae tristique risus
+                varius. Fusce non neque ut erat aliquet cursus in eget arcu..
+              </p>
+              <a href="#" class="btn btn-secondary">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Project Title 2</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse a enim quis velit facilisis fringilla. Curabitur
+                tincidunt ligula in mauris pretium, vitae tristique risus
+                varius. Fusce non neque ut erat aliquet cursus in eget
+                arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse a enim quis velit facilisis fringilla. Curabitur
+                tincidunt ligula in mauris pretium, vitae tristique risus
+                varius. Fusce non neque ut erat aliquet cursus in eget arcu.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse a enim quis velit facilisis fringilla. Curabitur
+                tincidunt ligula in mauris pretium, vitae tristique risus
+                varius. Fusce non neque ut erat aliquet cursus in eget arcu.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse a enim quis velit facilisis fringilla. Curabitur
+                tincidunt ligula in mauris pretium, vitae tristique risus
+                varius. Fusce non neque ut erat aliquet cursus in eget arcu..
+              </p>
+              <a href="#" class="btn btn-secondary">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Project Title 3</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse a enim quis velit facilisis fringilla. Curabitur
+                tincidunt ligula in mauris pretium, vitae tristique risus
+                varius. Fusce non neque ut erat aliquet cursus in eget
+                arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse a enim quis velit facilisis fringilla. Curabitur
+                tincidunt ligula in mauris pretium, vitae tristique risus
+                varius. Fusce non neque ut erat aliquet cursus in eget arcu.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse a enim quis velit facilisis fringilla. Curabitur
+                tincidunt ligula in mauris pretium, vitae tristique risus
+                varius. Fusce non neque ut erat aliquet cursus in eget arcu.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse a enim quis velit facilisis fringilla. Curabitur
+                tincidunt ligula in mauris pretium, vitae tristique risus
+                varius. Fusce non neque ut erat aliquet cursus in eget arcu.
+              </p>
+              <a href="#" class="btn btn-secondary">View Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page">
+      <h2 class="text-center mb-4">Latest Blog Posts</h2>
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action">
+          <h5 class="mb-1">Understanding Cloud Computing</h5>
+          <p class="mb-1">
+            An overview of cloud computing and its benefits for businesses.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            a enim quis velit facilisis fringilla. Curabitur tincidunt ligula in
+            mauris pretium, vitae tristique risus varius. Fusce non neque ut
+            erat aliquet cursus in eget arcu.Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Suspendisse a enim quis velit facilisis
+            fringilla. Curabitur tincidunt ligula in mauris pretium, vitae
+            tristique risus varius. Fusce non neque ut erat aliquet cursus in
+            eget arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Suspendisse a enim quis velit facilisis fringilla. Curabitur
+            tincidunt ligula in mauris pretium, vitae tristique risus varius.
+            Fusce non neque ut erat aliquet cursus in eget arcu. Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit. Suspendisse a enim quis
+            velit facilisis fringilla. Curabitur tincidunt ligula in mauris
+            pretium, vitae tristique risus varius. Fusce non neque ut erat
+            aliquet cursus in eget arcu.
+          </p>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+          <h5 class="mb-1">Top 5 Tech Trends in 2024</h5>
+          <p class="mb-1">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            a enim quis velit facilisis fringilla. Curabitur tincidunt ligula in
+            mauris pretium, vitae tristique risus varius. Fusce non neque ut
+            erat aliquet cursus in eget arcu.Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Suspendisse a enim quis velit facilisis
+            fringilla. Curabitur tincidunt ligula in mauris pretium, vitae
+            tristique risus varius. Fusce non neque ut erat aliquet cursus in
+            eget arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Suspendisse a enim quis velit facilisis fringilla. Curabitur
+            tincidunt ligula in mauris pretium, vitae tristique risus varius.
+            Fusce non neque ut erat aliquet cursus in eget arcu. Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit. Suspendisse a enim quis
+            velit facilisis fringilla. Curabitur tincidunt ligula in mauris
+            pretium, vitae tristique risus varius. Fusce non neque ut erat
+            aliquet cursus in eget arcu.
+          </p>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+          <h5 class="mb-1">Artificial Intelligense</h5>
+          <p class="mb-1">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            a enim quis velit facilisis fringilla. Curabitur tincidunt ligula in
+            mauris pretium, vitae tristique risus varius. Fusce non neque ut
+            erat aliquet cursus in eget arcu.Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Suspendisse a enim quis velit facilisis
+            fringilla.
+          </p>
+        </a>
+    <footer>
+      <p>&copy; 2024 SunTechnosystem. All Rights Reserved.</p>
+      <p>This document belongs to the Property of SunTechnosystem.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-      const salesCtx = document.getElementById("myChart").getContext("2d");
-      const myChart = new Chart(salesCtx, {
-        type: "bar",
-        data: {
-          labels: ["January", "February", "March", "April", "May", "June"],
-          datasets: [
-            {
-              label: "Sales",
-              data: [12, 19, 3, 5, 2, 3],
-              backgroundColor: [
-                "rgba(40, 167, 69, 0.2)" /* Light green for sales bars */,
-                "rgba(54, 162, 235, 0.2)",
-                "rgba(255, 206, 86, 0.2)",
-                "rgba(75, 192, 192, 0.2)",
-                "rgba(153, 102, 255, 0.2)",
-                "rgba(255, 159, 64, 0.2)",
-              ],
-              borderColor: [
-                "rgba(40, 167, 69, 1)" /* Dark green for sales borders */,
-                "rgba(54, 162, 235, 1)",
-                "rgba(255, 206, 86, 1)",
-                "rgba(75, 192, 192, 1)",
-                "rgba(153, 102, 255, 1)",
-                "rgba(255, 159, 64, 1)",
-              ],
-              borderWidth: 1,
-            },
-          ],
-        },
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
+      document.addEventListener("DOMContentLoaded", () => {
+        const performanceCtx = document
+          .getElementById("performanceChart")
+          .getContext("2d");
+        new Chart(performanceCtx, {
+          type: "line",
+          data: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                label: "Performance",
+                data: [65, 59, 80, 81, 56, 55],
+                backgroundColor: "rgba(40, 167, 69, 0.2)",
+                borderColor: "#28a745",
+                borderWidth: 2,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            scales: {
+              y: { beginAtZero: true },
             },
           },
-        },
-      });
-      const performanceCtx = document
-        .getElementById("performanceChart")
-        .getContext("2d");
-      const performanceChart = new Chart(performanceCtx, {
-        type: "line",
-        data: {
-          labels: ["January", "February", "March", "April", "May", "June"],
-          datasets: [
-            {
-              label: "Performance",
-              data: [65, 59, 80, 81, 56, 55],
-              borderColor: "rgba(75, 192, 192, 1)",
-              tension: 0.1,
-              fill: false,
+        });
+
+        const salesCtx = document.getElementById("myChart").getContext("2d");
+        const myChart = new Chart(salesCtx, {
+          type: "bar",
+          data: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                label: "Sales",
+                data: [12, 19, 3, 5, 2, 3],
+                backgroundColor: [
+                  "rgba(40, 167, 69, 0.2)",
+                  "rgba(54, 162, 235, 0.2)",
+                  "rgba(255, 206, 86, 0.2)",
+                  "rgba(75, 192, 192, 0.2)",
+                  "rgba(153, 102, 255, 0.2)",
+                  "rgba(255, 159, 64, 0.2)",
+                ],
+                borderColor: [
+                  "rgba(40, 167, 69, 1)" ,
+                  "rgba(54, 162, 235, 1)",
+                  "rgba(255, 206, 86, 1)",
+                  "rgba(75, 192, 192, 1)",
+                  "rgba(153, 102, 255, 1)",
+                  "rgba(255, 159, 64, 1)",
+                ],
+                borderWidth: 1,
+              },
+            ],
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true,
+              },
             },
-          ],
-        },
+          },
+        });
       });
     </script>
   </body>
