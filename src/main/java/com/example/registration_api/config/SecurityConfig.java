@@ -31,6 +31,7 @@ public class SecurityConfig {
                                 "/api/auth/login",
                                 "/api/menu",
                                 "/api/customers",
+                                "/leaseApplication",
                                 "/api/customers/{id}",
                                 "/api/property-managers",
                                 "/api/property-managers/{id}",

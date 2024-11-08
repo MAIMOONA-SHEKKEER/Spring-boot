@@ -4,11 +4,13 @@ public class LoginResponse {
     private String email;
     private String role;
     private String message;
+    private String name;
 
-    public LoginResponse(String email, String role, String message) {
+    public LoginResponse(String email, String role, String message, String name) {
         this.email = email;
         this.role = role;
         this.message = message;
+        this.name = name;
     }
 
     public String getEmail() {
@@ -21,6 +23,10 @@ public class LoginResponse {
 
     public String getMessage() {
         return message;
+    }
+
+    public String getFull_name() {
+        return name;
     }
 
     public void setEmail(String email) {

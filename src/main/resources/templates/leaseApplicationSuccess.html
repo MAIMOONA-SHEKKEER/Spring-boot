@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lease Application Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" />
+  <style>
+    body {
+      background-color: #f0f8f4;
+      margin: 0;
+      padding-top: 80px;
+      font-family: "Arial", sans-serif;
+    }
+    header {
+      background: linear-gradient(90deg, #1e8c1c, #285818);
+      color: #fff;
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1030;
+    }
+    footer {
+      background: linear-gradient(90deg, #1e8c1c, #285818);
+      color: #fff;
+      text-align: center;
+      padding: 10px 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="d-flex align-items-center">
+      <img src="http://www.suntechnosystems.com/wp-content/themes/suntechnosystems/images/logo.png" alt="SunTechnosystem Logo" />
+      <div class="ms-3">
+        <h5 class="mb-0">SunTechnosystems</h5>
+        <p>1234 Tech Park, Suite 400, California, USA</p>
+      </div>
+    </div>
+  </header>
+  <div class="container mt-4">
+    <h2>Application to Lease</h2>
+    <form th:action="@{/submitApplication}" th:object="${application}" method="post">
+      <!-- Property Details Section -->
+      <div class="card mt-3">
+        <div class="card-header">Property Details</div>
+        <div class="card-body">
+          <div class="mb-3">
+            <label>Property Address:</label>
+            <input type="text" class="form-control" th:field="*{propertyDetails.address}" required />
+          </div>
+          <div class="mb-3">
+            <label>Period Required:</label>
+            <input type="text" class="form-control" th:field="*{propertyDetails.periodRequired}" required />
+          </div>
+          <div class="mb-3">
+            <label>Rental Payable:</label>
+            <input type="number" class="form-control" th:field="*{propertyDetails.rentalPayable}" required />
+          </div>
+          <div class="mb-3">
+            <label>Occupation Date:</label>
+            <input type="date" class="form-control" th:field="*{propertyDetails.occupationDate}" required />
+          </div>
+          <div class="mb-3">
+            <label>Number of Occupants:</label>
+            <input type="number" class="form-control" th:field="*{propertyDetails.numberOfOccupants}" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Primary Resident Details Section -->
+      <div class="card mt-3">
+        <div class="card-header">Primary Resident Details</div>
+        <div class="card-body">
+          <div class="mb-3">
+            <label>Name and Surname:</label>
+            <input type="text" class="form-control" th:field="*{primaryResident.name}" required />
+          </div>
+          <div class="mb-3">
+            <label>ID/Passport Number:</label>
+            <input type="text" class="form-control" th:field="*{primaryResident.idPassportNumber}" required />
+          </div>
+          <div class="mb-3">
+            <label>Contact Number (Bus):</label>
+            <input type="text" class="form-control" th:field="*{primaryResident.businessContact}" />
+          </div>
+          <div class="mb-3">
+            <label>Contact Number (Cell):</label>
+            <input type="text" class="form-control" th:field="*{primaryResident.cellContact}" required />
+          </div>
+          <div class="mb-3">
+            <label>Current Residential Address:</label>
+            <input type="text" class="form-control" th:field="*{primaryResident.currentAddress}" required />
+          </div>
+          <div class="mb-3">
+            <label>Email Address:</label>
+            <input type="email" class="form-control" th:field="*{primaryResident.email}" required />
+          </div>
+        </div>
+      </div>
+
+      <!-- Employment Section -->
+      <div class="card mt-3">
+        <div class="card-header">Employment Details</div>
+        <div class="card-body">
+          <div class="mb-3">
+            <label>Employment Type:</label>
+            <input type="text" class="form-control" th:field="*{employmentDetails.employmentType}" required />
+          </div>
+          <div class="mb-3">
+            <label>Employer Name:</label>
+            <input type="text" class="form-control" th:field="*{employmentDetails.currentEmployer}" />
+          </div>
+          <div class="mb-3">
+            <label>Position:</label>
+            <input type="text" class="form-control" th:field="*{employmentDetails.position}" />
+          </div>
+          <div class="mb-3">
+            <label>Length of Service:</label>
+            <input type="text" class="form-control" th:field="*{employmentDetails.lengthOfService}" />
+          </div>
+          <div class="mb-3">
+            <label>Gross Salary:</label>
+            <input type="number" class="form-control" th:field="*{employmentDetails.grossSalary}" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Emergency Contact Section -->
+      <div class="card mt-3">
+        <div class="card-header">Emergency Contact Details</div>
+        <div class="card-body">
+          <div class="mb-3">
+            <label>First Emergency Contact Name:</label>
+            <input type="text" class="form-control" th:field="*{emergencyContact.firstContactName}" />
+          </div>
+          <div class="mb-3">
+            <label>First Emergency Contact Relationship:</label>
+            <input type="text" class="form-control" th:field="*{emergencyContact.firstContactRelationship}" />
+          </div>
+          <div class="mb-3">
+            <label>First Emergency Contact Phone:</label>
+            <input type="text" class="form-control" th:field="*{emergencyContact.firstContactPhone}" />
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary mt-3">Submit Application</button>
+    </form>
+  </div>
+  <footer>
+    <p>&copy; 2024 SunTechnosystems. All rights reserved.</p>
+  </footer>
+</body>
+</html>

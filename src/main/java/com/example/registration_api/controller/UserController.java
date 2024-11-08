@@ -41,12 +41,12 @@ public class UserController {
                     .map(user -> {
                         logger.info("User logged in successfully: {}", loginRequest.getEmail());
                         LoginResponse loginResponse = new LoginResponse(user.getEmail(), user.getRole(),
-                                "Login successful");
+                                "Login successful", user.getFull_name());
                         return ResponseEntity.ok(loginResponse);
                     })
                     .orElseGet(() -> {
                         logger.warn("Failed login attempt for email: {}", loginRequest.getEmail());
-                        LoginResponse errorResponse = new LoginResponse(null, null, "Invalid credentials");
+                        LoginResponse errorResponse = new LoginResponse(null, null, "Invalid credentias", null);
                         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(errorResponse);
                     });
         } catch (Exception e) {

@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lease Application Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background-color: #f0f8f4;
+        margin: 0;
+        padding-top: 80px;
+        font-family: "Arial", sans-serif;
+      }
+
+      header {
+        background: linear-gradient(90deg, #1e8c1c, #285818);
+        color: #fff;
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1030;
+      }
+
+      header img {
+        height: 60px;
+        max-width: 60px;
+        border-radius: 10%;
+        margin-left: 10px;
+      }
+
+      .address {
+        font-size: 14px;
+        margin: 0;
+      }
+
+      .header-title {
+        font-size: 3.5rem;
+        font-weight: bold;
+      }
+
+      .header-tagline {
+        font-size: 1rem;
+        font-style: italic;
+      }
+
+      footer {
+        background: linear-gradient(90deg, #1e8c1c, #285818);
+        color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        padding: 10px 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="d-flex align-items-center">
+        <img
+          src="http://www.suntechnosystems.com/wp-content/themes/suntechnosystems/images/logo.png"
+          alt="SunTechnosystem Logo"
+        />
+        <div class="ms-3">
+          <h5 class="mb-0">SunTechnosystems</h5>
+          <p class="header-tagline">
+            1234 Tech Park, Suite 400, California, USA
+          </p>
+        </div>
+      </div>
+    </header>
+    <div class="container mt-4">
+      <h2>Lease Application Form</h2>
+      <form action="/submitApplication" method="post">
+        <!-- Property Details Section -->
+        <div class="card mt-3">
+          <div class="card-header">Property Details</div>
+          <div class="card-body">
+            <div class="mb-3">
+              <label>Property Address:</label>
+              <input
+                type="text"
+                class="form-control"
+                value=""
+                placeholder="Enter property address"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label>Period Required:</label>
+              <input
+                type="text"
+                class="form-control"
+                value=""
+                placeholder="Enter period required (e.g., 12 months)"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label>Rental Payable:</label>
+              <input
+                type="number"
+                class="form-control"
+                value=""
+                placeholder="Enter rental amount"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label>Occupation Date:</label>
+              <input
+                type="date"
+                class="form-control"
+                value=""
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label>Number of Occupants:</label>
+              <input
+                type="number"
+                class="form-control"
+                value=""
+                placeholder="Enter number of occupants"
+              />
+            </div>
+            <div class="mb-3">
+              <label>Number of Adults:</label>
+              <input
+                type="number"
+                class="form-control"
+                value=""
+                placeholder="Enter number of adults"
+              />
+            </div>
+            <div class="mb-3">
+              <label>Number of Children:</label>
+              <input
+                type="number"
+                class="form-control"
+                value=""
+                placeholder="Enter number of children"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Primary Resident Details Section -->
+        <div class="card mt-3">
+          <div class="card-header">Part A: Information Required from Primary Resident(s)</div>
+          <div class="card-body">
+            <div class="mb-3">
+              <label>Name and Surname:</label>
+              <input
+                type="text"
+                class="form-control"
+                value=""
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label>ID/Passport Number:</label>
+              <input
+                type="text"
+                class="form-control"
+                value=""
+                placeholder="Enter your ID or passport number"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label>Contact Numbers: Bus:</label>
+              <input
+                type="text"
+                class="form-control"
+                value=""
+                placeholder="Enter business contact number"
+              />
+            </div>
+            <div class="mb-3">
+              <label>Cell:</label>
+              <input
+                type="text"
+                class="form-control"
+                value=""
+                placeholder="Enter cell phone number"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label>Current Residential Address:</label>
+              <input
+                type="text"
+                class="form-control"
+                value=""
+                placeholder="Enter your current residential address"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label>Email:</label>
+              <input
+                type="email"
+                class="form-control"
+                value=""
+                placeholder="Enter your email address"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label>Full Names of Spouse/Partner:</label>
+              <input
+                type="text"
+                class="form-control"
+                value=""
+                placeholder="Enter spouse/partner name"
+              />
+            </div>
+            <div class="mb-3">
+              <label>ID/Passport Number of Spouse/Partner:</label>
+              <input
+                type="text"
+                class="form-control"
+                value=""
+                placeholder="Enter spouse/partner ID/Passport"
+              />
+            </div>
+            <div class="mb-3">
+              <label>Contact Numbers of Spouse/Partner: Bus:</label>
+              <input
+                type="text"
+                class="form-control"
+                value=""
+                placeholder="Enter spouse/partner business contact"
+              />
+            </div>
+            <div class="mb-3">
+              <label>Cell:</label>
+              <input
+                type="text"
+                class="form-control"
+                value=""
+                placeholder="Enter spouse/partner cell number"
+              />
+            </div>
+            <div class="mb-3">
+              <label>Email of Spouse/Partner:</label>
+              <input
+                type="email"
+                class="form-control"
+                value=""
+                placeholder="Enter spouse/partner email address"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Legal Entity Information Section -->
+        <div class="card mt-3">
+          <div class="card-header">Part B: If Applicant is a Legal Entity on Behalf of the Primary Resident</div>
+          <div class="card-body">
+            <div class="mb-3">
+              <label>Name of Entity:</label>
+              <input
+                type="text"
+                class="form-control"
+                value=""
+                placeholder="Enter name of the entity"
+              />
+            </div>
+            <div class="mb-3">
+              <label>Registration Number:</label>
+              <input
+                type="text"
+                class="form-control"
+                value=""
+                placeholder="Enter registration number"
+              />
+            </div>
+            <div class="mb-3">
+              <label>Represented by Full Name(s):</label>
+              <input
+                type="text"
+                class="form-control"
+                value=""
+                placeholder="Enter name(s) of the representative"
+              />
+            </div>
+            <div class="mb-3">
+              <label>ID/Passport Number of Representative:</label>
+              <input
+                type="text"
+                class="form-control"
+                value=""
+                placeholder="Enter ID/Passport of representative"
+              />
+            </div>
+            <div class="mb-3">
+              <label>Contact Numbers: Bus:</label>
+              <input
+                type="text"
+                class="form-control"
+                value=""
+                placeholder="Enter business contact"
+              />
+            </div>
+            <div class="mb-3">
+              <label>Cell:</label>
+              <input
+                type="text"
+                class="form-control"
+                value=""
+                placeholder="Enter cell contact"
+              />
+            </div>
+            <div class="mb-3">
+              <label>Email:</label>
+              <input
+                type="email"
+                class="form-control"
+                value=""
+                placeholder="Enter email address"
+              />
+            </div>
+            <div class="mb-3">
+              <label>Current Address:</label>
+              <input
+                type="text"
+                class="form-control"
+                value=""
+                placeholder="Enter current address"
+              />
+            </div>
+            <div class="mb-3">
+              <label>Own/Rent/Other:</label>
+              <input
+                type="text"
+                class="form-control"
+                value=""
+                placeholder="Enter ownership status"
+              />
+            </div>
+            <div class="mb-3">
+              <label>*Annual turn-over or asset value exceeds R2 million:</label>
+              <input
+                type="checkbox"
+                class="form-check-input"
+              />
+            </div>
+            <div class="mb-3">
+              <label>*Annual turn-over or asset value do not exceed R2 million:</label>
+              <input
+                type="checkbox"
+                class="form-check-input"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- PART C: Previous Landlord’s and Details of Tenancy -->
+<div class="card mt-3">
+  <div class="card-header">PART C: Previous Landlord’s and Details of Tenancy</div>
+  <div class="card-body">
+    <div class="mb-3">
+      <label for="previousLandlord1">1. Landlord Contact No:</label>
+      <input type="text" class="form-control" id="previousLandlord1" placeholder="Enter contact number" />
+    </div>
+    <div class="mb-3">
+      <label for="previousLandlordAddress1">Address:</label>
+      <input type="text" class="form-control" id="previousLandlordAddress1" placeholder="Enter address" />
+    </div>
+    <div class="mb-3">
+      <label for="reasonForLeaving1">Reason for leaving:</label>
+      <input type="text" class="form-control" id="reasonForLeaving1" placeholder="Enter reason for leaving" />
+    </div>
+    <div class="mb-3">
+      <label for="tenancyPeriod1">Period:</label>
+      <input type="text" class="form-control" id="tenancyPeriod1" placeholder="Enter period" />
+    </div>
+    <div class="mb-3">
+      <label for="latePayments1">No. of late payments:</label>
+      <input type="number" class="form-control" id="latePayments1" placeholder="Enter number of late payments" />
+    </div>
+    <div class="mb-3">
+      <label for="depositRefunded1">Was your full deposit refunded?</label>
+      <input type="text" class="form-control" id="depositRefunded1" placeholder="Enter yes/no" />
+    </div>
+    <div class="mb-3">
+      <label for="depositRefundReason1">Reason, if not:</label>
+      <input type="text" class="form-control" id="depositRefundReason1" placeholder="Enter reason if deposit not refunded" />
+    </div>
+
+    <!-- Second Landlord -->
+    <div class="mb-3">
+      <label for="previousLandlord2">2. Landlord Contact No:</label>
+      <input type="text" class="form-control" id="previousLandlord2" placeholder="Enter contact number" />
+    </div>
+    <div class="mb-3">
+      <label for="previousLandlordAddress2">Address:</label>
+      <input type="text" class="form-control" id="previousLandlordAddress2" placeholder="Enter address" />
+    </div>
+    <div class="mb-3">
+      <label for="reasonForLeaving2">Reason for leaving:</label>
+      <input type="text" class="form-control" id="reasonForLeaving2" placeholder="Enter reason for leaving" />
+    </div>
+    <div class="mb-3">
+      <label for="tenancyPeriod2">Period:</label>
+      <input type="text" class="form-control" id="tenancyPeriod2" placeholder="Enter period" />
+    </div>
+    <div class="mb-3">
+      <label for="latePayments2">No. of late payments:</label>
+      <input type="number" class="form-control" id="latePayments2" placeholder="Enter number of late payments" />
+    </div>
+    <div class="mb-3">
+      <label for="depositRefunded2">Was your full deposit refunded?</label>
+      <input type="text" class="form-control" id="depositRefunded2" placeholder="Enter yes/no" />
+    </div>
+    <div class="mb-3">
+      <label for="depositRefundReason2">Reason, if not:</label>
+      <input type="text" class="form-control" id="depositRefundReason2" placeholder="Enter reason if deposit not refunded" />
+    </div>
+
+    <!-- Additional Questions -->
+    <div class="mb-3">
+      <label for="brokenLease">Have you ever broken lease? Refused to pay rent/held back rent?</label>
+      <input type="text" class="form-control" id="brokenLease" placeholder="Enter reason/s" />
+    </div>
+    <div class="mb-3">
+      <label for="evicted">Have you ever been evicted or asked to leave a rental property?</label>
+      <input type="text" class="form-control" id="evicted" placeholder="Enter reason/s" />
+    </div>
+  </div>
+</div>
+
+<!-- PART D: Financial -->
+<div class="card mt-3">
+  <div class="card-header">PART D: Financial</div>
+  <div class="card-body">
+    <div class="mb-3">
+      <label for="employmentStatus">Employment/Income History (Tick the appropriate block):</label><br />
+      <label><input type="radio" name="employmentStatus" value="Full Time" /> Full Time</label>
+      <label><input type="radio" name="employmentStatus" value="Part Time" /> Part Time (less than 32 hrs)</label>
+      <label><input type="radio" name="employmentStatus" value="Student" /> Student</label>
+      <label><input type="radio" name="employmentStatus" value="Retired" /> Retired</label>
+      <label><input type="radio" name="employmentStatus" value="Self-Employed" /> Self-Employed</label>
+      <label><input type="radio" name="employmentStatus" value="Other" /> Other (specify)</label>
+    </div>
+
+    <h5>Current Employer</h5>
+    <div class="mb-3">
+      <label for="position">Position:</label>
+      <input type="text" class="form-control" id="position" placeholder="Enter your position" />
+    </div>
+    <div class="mb-3">
+      <label for="lengthOfService">Length of Service:</label>
+      <input type="text" class="form-control" id="lengthOfService" placeholder="Enter length of service" />
+    </div>
+    <div class="mb-3">
+      <label for="companyName">Name of Company:</label>
+      <input type="text" class="form-control" id="companyName" placeholder="Enter company name" />
+    </div>
+    <div class="mb-3">
+      <label for="supervisorName">Supervisor Name:</label>
+      <input type="text" class="form-control" id="supervisorName" placeholder="Enter supervisor name" />
+    </div>
+    <div class="mb-3">
+      <label for="contactTel">Tel:</label>
+      <input type="tel" class="form-control" id="contactTel" placeholder="Enter contact number" />
+    </div>
+    <div class="mb-3">
+      <label for="contactEmail">E-Mail:</label>
+      <input type="email" class="form-control" id="contactEmail" placeholder="Enter email address" />
+    </div>
+    <div class="mb-3">
+      <label for="grossSalary">Gross Salary:</label>
+      <input type="number" class="form-control" id="grossSalary" placeholder="Enter gross salary" />
+    </div>
+    <div class="mb-3">
+      <label for="additionalIncome">Additional Income:</label>
+      <input type="number" class="form-control" id="additionalIncome" placeholder="Enter additional income" />
+    </div>
+    <div class="mb-3">
+      <label for="monthlyTakeHome">Monthly take home:</label>
+      <input type="number" class="form-control" id="monthlyTakeHome" placeholder="Enter monthly take home" />
+    </div>
+    <div class="mb-3">
+      <label for="balanceAfterDebts">Balance after debt repayments and living expenses:</label>
+      <input type="number" class="form-control" id="balanceAfterDebts" placeholder="Enter balance after debt repayments" />
+    </div>
+  </div>
+</div>
+
+<!-- Additional Sections -->
+<!-- Partner/Spouse’s Employer -->
+<div class="card mt-3">
+  <div class="card-header">Partner/Spouse’s Employer</div>
+  <div class="card-body">
+    <div class="mb-3">
+      <label for="partnerPosition">Position:</label>
+      <input type="text" class="form-control" id="partnerPosition" placeholder="Enter position" />
+    </div>
+    <div class="mb-3">
+      <label for="partnerLengthOfService">Length of Service:</label>
+      <input type="text" class="form-control" id="partnerLengthOfService" placeholder="Enter length of service" />
+    </div>
+    <div class="mb-3">
+      <label for="partnerCompanyName">Name of Company:</label>
+      <input type="text" class="form-control" id="partnerCompanyName" placeholder="Enter company name" />
+    </div>
+    <div class="mb-3">
+      <label for="partnerSupervisorName">Supervisor Name:</label>
+      <input type="text" class="form-control" id="partnerSupervisorName" placeholder="Enter supervisor name" />
+    </div>
+    <div class="mb-3">
+      <label for="partnerTel">Tel:</label>
+      <input type="tel" class="form-control" id="partnerTel" placeholder="Enter contact number" />
+    </div>
+    <div class="mb-3">
+      <label for="partnerEmail">E-Mail:</label>
+      <input type="email" class="form-control" id="partnerEmail" placeholder="Enter email address" />
+    </div>
+    <div class="mb-3">
+      <label for="partnerGrossSalary">Gross Salary:</label>
+      <input type="number" class="form-control" id="partnerGrossSalary" placeholder="Enter gross salary" />
+    </div>
+    <div class="mb-3">
+      <label for="partnerAdditionalIncome">Additional Income:</label>
+      <input type="number" class="form-control" id="partnerAdditionalIncome" placeholder="Enter additional income" />
+    </div>
+    <div class="mb-3">
+      <label for="partnerMonthlyTakeHome">Monthly take home:</label>
+      <input type="number" class="form-control" id="partnerMonthlyTakeHome" placeholder="Enter monthly take home" />
+    </div>
+    <div class="mb-3">
+      <label for="partnerBalanceAfterDebts">Balance after debt repayments and living expenses:</label>
+      <input type="number" class="form-control" id="partnerBalanceAfterDebts" placeholder="Enter balance after debt repayments" />
+    </div>
+    <div class="mb-3">
+      <label for="partnerSequestrated">Have they ever been sequestrated? If yes, state date of rehabilitation:</label>
+      <input type="text" class="form-control" id="partnerSequestrated" placeholder="Enter date of rehabilitation" />
+    </div>
+    <div class="mb-3">
+      <label for="partnerJudgements">Do they have any judgements against you? If yes, state date of rescinding of judgement:</label>
+      <input type="text" class="form-control" id="partnerJudgements" placeholder="Enter judgement details" />
+    </div>
+  </div>
+</div>
+
+<!-- Trade References/Accounts -->
+<div class="card mt-3">
+  <div class="card-header">TRADE REFERENCES/ACCOUNTS</div>
+  <div class="card-body">
+    <h5>Reference 1</h5>
+    <div class="mb-3">
+      <label for="bankName">Bank:</label>
+      <input type="text" class="form-control" id="bankName" placeholder="Enter bank name" />
+    </div>
+    <div class="mb-3">
+      <label for="bankBranch">Branch:</label>
+      <input type="text" class="form-control" id="bankBranch" placeholder="Enter branch name" />
+    </div>
+    <div class="mb-3">
+      <label for="bankAccNo">Acc No:</label>
+      <input type="text" class="form-control" id="bankAccNo" placeholder="Enter account number" />
+    </div>
+    <div class="mb-3">
+      <label for="companyNameRef1">Company:</label>
+      <input type="text" class="form-control" id="companyNameRef1" placeholder="Enter company name" />
+    </div>
+    <div class="mb-3">
+      <label for="accNoRef1">Acc No:</label>
+      <input type="text" class="form-control" id="accNoRef1" placeholder="Enter account number" />
+    </div>
+    <div class="mb-3">
+      <label for="balanceRef1">Balance:</label>
+      <input type="number" class="form-control" id="balanceRef1" placeholder="Enter balance" />
+    </div>
+    <div class="mb-3">
+      <label for="monthlyPaymentRef1">Monthly payment:</label>
+      <input type="number" class="form-control" id="monthlyPaymentRef1" placeholder="Enter monthly payment" />
+    </div>
+    <div class="mb-3">
+      <label for="creditLimitRef1">Credit Limit:</label>
+      <input type="number" class="form-control" id="creditLimitRef1" placeholder="Enter credit limit" />
+    </div>
+
+    <!-- Reference 2 -->
+    <h5>Reference 2</h5>
+    <div class="mb-3">
+      <label for="bankName2">Bank:</label>
+      <input type="text" class="form-control" id="bankName2" placeholder="Enter bank name" />
+    </div>
+    <div class="mb-3">
+      <label for="bankBranch2">Branch:</label>
+      <input type="text" class="form-control" id="bankBranch2" placeholder="Enter branch name" />
+    </div>
+    <div class="mb-3">
+      <label for="bankAccNo2">Acc No:</label>
+      <input type="text" class="form-control" id="bankAccNo2" placeholder="Enter account number" />
+    </div>
+    <div class="mb-3">
+      <label for="companyNameRef2">Company:</label>
+      <input type="text" class="form-control" id="companyNameRef2" placeholder="Enter company name" />
+    </div>
+    <div class="mb-3">
+      <label for="accNoRef2">Acc No:</label>
+      <input type="text" class="form-control" id="accNoRef2" placeholder="Enter account number" />
+    </div>
+    <div class="mb-3">
+      <label for="balanceRef2">Balance:</label>
+      <input type="number" class="form-control" id="balanceRef2" placeholder="Enter balance" />
+    </div>
+    <div class="mb-3">
+      <label for="monthlyPaymentRef2">Monthly payment:</label>
+      <input type="number" class="form-control" id="monthlyPaymentRef2" placeholder="Enter monthly payment" />
+    </div>
+    <div class="mb-3">
+      <label for="creditLimitRef2">Credit Limit:</label>
+      <input type="number" class="form-control" id="creditLimitRef2" placeholder="Enter credit limit" />
+    </div>
+  </div>
+</div>
+
+<!-- PART E: General -->
+<div class="card mt-3">
+  <div class="card-header">PART E: General</div>
+  <div class="card-body">
+    <h5>Proposed Occupants</h5>
+    <div class="mb-3">
+      <label for="occupantName">Name:</label>
+      <input type="text" class="form-control" id="occupantName" placeholder="Enter name" />
+    </div>
+    <div class="mb-3">
+      <label for="relationship">Relationship:</label>
+      <input type="text" class="form-control" id="relationship" placeholder="Enter relationship" />
+    </div>
+    <div class="mb-3">
+      <label for="occupation">Occupation/Employment details:</label>
+      <input type="text" class="form-control" id="occupation" placeholder="Enter occupation or employment details" />
+    </div>
+    <div class="mb-3">
+      <label for="age">Age:</label>
+      <input type="number" class="form-control" id="age" placeholder="Enter age" />
+    </div>
+    <div class="mb-3">
+      <label for="pets">Will you be bringing pets? If yes, number of pets and breed:</label>
+      <input type="text" class="form-control" id="pets" placeholder="Enter number of pets and breed" />
+    </div>
+  </div>
+</div>
+
+<!-- Additional Contact Information -->
+<div class="card mt-3">
+  <div class="card-header">ADDITIONAL CONTACT INFORMATION</div>
+  <div class="card-body">
+    <h5>1st Emergency Contact</h5>
+    <div class="mb-3">
+      <label for="emergencyContact1Name">Name:</label>
+      <input type="text" class="form-control" id="emergencyContact1Name" placeholder="Enter name" />
+    </div>
+    <div class="mb-3">
+      <label for="emergencyContact1Relationship">Relationship:</label>
+      <input type="text" class="form-control" id="emergencyContact1Relationship" placeholder="Enter relationship" />
+    </div>
+    <div class="mb-3">
+      <label for="emergencyContact1Email">Email:</label>
+      <input type="email" class="form-control" id="emergencyContact1Email" placeholder="Enter email address" />
+    </div>
+    <div class="mb-3">
+      <label for="emergencyContact1TelHome">Tel (Home):</label>
+      <input type="tel" class="form-control" id="emergencyContact1TelHome" placeholder="Enter home contact number" />
+    </div>
+    <div class="mb-3">
+      <label for="emergencyContact1TelCell">Cell:</label>
+      <input type="tel" class="form-control" id="emergencyContact1TelCell" placeholder="Enter cell contact number" />
+    </div>
+
+    <h5>2nd Emergency Contact</h5>
+    <div class="mb-3">
+      <label for="emergencyContact2Name">Name:</label>
+      <input type="text" class="form-control" id="emergencyContact2Name" placeholder="Enter name" />
+    </div>
+    <div class="mb-3">
+      <label for="emergencyContact2Relationship">Relationship:</label>
+      <input type="text" class="form-control" id="emergencyContact2Relationship" placeholder="Enter relationship" />
+    </div>
+    <div class="mb-3">
+      <label for="emergencyContact2Email">Email:</label>
+      <input type="email" class="form-control" id="emergencyContact2Email" placeholder="Enter email address" />
+    </div>
+    <div class="mb-3">
+      <label for="emergencyContact2TelHome">Tel (Home):</label>
+      <input type="tel" class="form-control" id="emergencyContact2TelHome" placeholder="Enter home contact number" />
+    </div>
+    <div class="mb-3">
+      <label for="emergencyContact2TelCell">Cell:</label>
+      <input type="tel" class="form-control" id="emergencyContact2TelCell" placeholder="Enter cell contact number" />
+    </div>
+  </div>
+</div>
+
+<!-- PART F: Documentation Required -->
+<div class="card mt-3">
+  <div class="card-header">PART F: DOCUMENTATION REQUIRED</div>
+  <div class="card-body">
+    <p>Proof of the following has to be given (only originals or certified copies will be accepted):</p>
+    <ul>
+      <li>3/6 months bank statements</li>
+      <li>Copy of CK/CM document (if applicant is a legal entity)</li>
+      <li>Latest 3 months salary slip</li>
+      <li>Solvency letter from Accounting Officer (if applicant is a legal entity)</li>
+      <li>Identity document/Passport</li>
+      <li>Resolution to sign on behalf of a Company/CC/Trust</li>
+      <li>Proof of residential address</li>
+      <li>Copy of signatory’s SA ID document/Passport (if applicant is a legal entity)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- TERMS AND CONDITIONS -->
+<div class="card mt-3">
+  <div class="card-header">TERMS AND CONDITIONS</div>
+  <div class="card-body">
+    <p>1. You have to be over eighteen (18) years of age to sign the lease agreement.</p>
+    <p>2. All parties to the lease agreement will have to fill in an application and sign the Agreement of Lease.</p>
+  </div>
+</div>
+
+<!-- ACCEPTANCE -->
+<div class="card mt-3">
+  <div class="card-header">ACCEPTANCE</div>
+  <div class="card-body">
+    <p>1. Applicant or Applicants acknowledge this application will form part of the lease agreement when approved. If any information is found to be incorrect, the application will be rejected and any subsequent rental agreement becomes void. False and misleading statements will be sufficient reason for immediate eviction and loss of deposit.</p>
+    <p>2. No agreement shall be deemed to exist between the Landlord and/or his agent and the Applicant and/or Applicants until the lease agreement has been duly signed by, or on behalf of the Landlord, and monies paid, or arrangements made to pay the monies.</p>
+  </div>
+</div>
+
+<!-- Declaration -->
+<div class="card mt-3">
+  <div class="card-header">Declaration</div>
+  <div class="card-body">
+    <p>I, <strong>[Applicant's Name]</strong> declare that all the above information is correct and true.</p>
+    <div class="mb-3">
+      <label for="applicantSignature">Signature:</label>
+      <input type="text" class="form-control" id="applicantSignature" placeholder="Enter your signature" />
+    </div>
+    <div class="mb-3">
+      <label for="signDate">Signed at:</label>
+      <input type="text" class="form-control" id="signDate" placeholder="Enter location" />
+    </div>
+    <div class="mb-3">
+      <label for="signDateDay">On the day of:</label>
+      <input type="date" class="form-control" id="signDateDay" />
+    </div>
+    <div class="mb-3">
+      <label for="signYear">Year:</label>
+      <input type="number" class="form-control" id="signYear" placeholder="Enter year" />
+    </div>
+  </div>
+</div>
+<!-- Consent to Do Credit Check -->
+<div class="card mt-3">
+  <div class="card-header">CONSENT TO DO CREDIT CHECK</div>
+  <div class="card-body">
+    <p>I also consent to the Landlord or Agent to:</p>
+    <ul>
+      <li><strong>(i)</strong> contact, request and obtain information from any credit provider (or potential credit provider) or registered credit bureau relevant to an assessment of the behaviour, profile, payment patterns, indebtedness, whereabouts and credit worthiness of myself.</li>
+      <li><strong>(ii)</strong> furnish information concerning the behaviour, profile, payment patterns, indebtedness, whereabouts and credit worthiness of myself to any registered credit bureau or to any credit provider (or potential credit provider) seeking a trade reference regarding the tenants dealings with the Landlord or Agent.</li>
+      <li><strong>(iii)</strong> at any renewal of the Lease Agreement, re-do the above Credit Checks.</li>
+    </ul>
+    <div class="mb-3">
+      <label for="applicantConsentName">Name:</label>
+      <input type="text" class="form-control" id="applicantConsentName" placeholder="Enter name" />
+    </div>
+    <div class="mb-3">
+      <label for="applicantConsentSignature">Signature of Applicant:</label>
+      <input type="text" class="form-control" id="applicantConsentSignature" placeholder="Enter signature" />
+    </div>
+    <div class="mb-3">
+      <label for="applicantConsentDate">Date:</label>
+      <input type="date" class="form-control" id="applicantConsentDate" />
+    </div>
+  </div>
+</div>
+
+<!-- Acknowledgement of Monies Due on Successful Application -->
+<div class="card mt-3">
+  <div class="card-header">ACKNOWLEDGEMENT OF MONIES DUE ON SUCCESSFUL APPLICATION</div>
+  <div class="card-body">
+    <p>Please note that you will be liable for:</p>
+    <ol>
+      <li>One month’s rent, in advance: <strong>R</strong><input type="number" class="form-control" id="rentAmount" placeholder="Enter rent amount" /></li>
+      <li>A deposit, to be held in a trust account as deposit against any damages that may be caused during the tenancy and municipal accounts that may be outstanding. Such deposit becomes refundable in total or in part on vacation, in accordance with the Rental Housing Act.
+        <ul>
+          <li>Damages deposit: <strong>R</strong><input type="number" class="form-control" id="damagesDeposit" placeholder="Enter damages deposit" /></li>
+          <li>Services deposit: <strong>R</strong><input type="number" class="form-control" id="servicesDeposit" placeholder="Enter services deposit" /></li>
+          <li>Key/Remote deposit: <strong>R</strong><input type="number" class="form-control" id="keyRemoteDeposit" placeholder="Enter key/remote deposit" /></li>
+          <li><strong>TOTAL: R</strong><input type="number" class="form-control" id="totalDeposit" placeholder="Enter total deposit" /></li>
+        </ul>
+      </li>
+      <li>The cost of drawing up the Agreement of Lease: <strong>R</strong><input type="number" class="form-control" id="leaseAgreementCost" placeholder="Enter lease agreement cost" /> (inclusive of VAT)</li>
+      <li>Amount payable before credit application can be processed:
+        <ul>
+          <li>An application fee per applicant, payable: <strong>R</strong><input type="number" class="form-control" id="applicationFee" placeholder="Enter application fee" /> (inclusive of VAT) on application (non-refundable)</li>
+        </ul>
+      </li>
+    </ol>
+    <p>ALL THE ABOVE AMOUNTS TO BE PAID BEFORE MOVING IN OR HAND-OVER OF THE KEYS.</p>
+    <p><strong>(APPLICATION FEE PAYABLE AS ABOVE)</strong></p>
+  </div>
+</div>
+
+        <!-- Signature and Terms -->
+        <div class="mb-3">
+          <label>
+            <input
+              type="checkbox"
+              class="form-check-input"
+              required
+            />
+            I accept the terms and conditions
+          </label>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="d-flex justify-content-center mt-4">
+          <button type="submit" class="btn btn-success btn-lg">
+            Submit Application
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 SunTechnosystems. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
